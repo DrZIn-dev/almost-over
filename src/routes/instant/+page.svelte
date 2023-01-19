@@ -4,7 +4,7 @@
 	import dayjs from 'dayjs';
 
 	const endIsoDate = $page.url.searchParams.get('end') || dayjs().toISOString();
-
+	const title = $page.url.searchParams.get('title') || 'Untitled';
 	let endDate = dayjs(endIsoDate);
 	let timer = {
 		date: 0,
@@ -59,3 +59,4 @@
 		sec
 	</div>
 </div>
+<div class="divider">{title}</div>
